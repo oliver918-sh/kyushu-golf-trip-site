@@ -11,3 +11,7 @@ section{padding:100px 5vw}.section-head{display:grid;grid-template-columns:1fr 2
 .drive{background:var(--paper);color:#15241e}.drive-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0 42px}.drive-row{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid #cdd1c7}.drive-row strong{color:var(--green);white-space:nowrap}.notice{margin-top:34px;padding:22px;border-left:4px solid var(--gold);background:#e9e4d6}.footer{padding:70px 5vw;color:#9bb0a6;border-top:1px solid #ffffff1c}.footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px}.footer b{color:#fff}
 @media(max-width:800px){.nav-links{display:none}.hero,.hero-art{min-height:72vw}.hero-art{width:128%;max-width:none;transform:translateX(-11%)}section{padding:72px 5vw}.section-head{grid-template-columns:1fr}.fact-grid{grid-template-columns:1fr 1fr}.fact{padding:20px}.day{min-height:82vh;border-radius:0;margin-inline:-5vw}.day-content{grid-template-columns:1fr;gap:12px}.course-grid,.drive-list{grid-template-columns:1fr}.footer-inner{display:block}.scroll-cue{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Trip-specific imagery */
+.d1{background-image:url('/photos/day1-pudong.png')}
+.d7{background-image:url('/photos/day7-fukuoka.png')}
