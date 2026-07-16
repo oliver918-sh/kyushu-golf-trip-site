@@ -14,4 +14,6 @@ section{padding:100px 5vw}.section-head{display:grid;grid-template-columns:1fr 2
 
 /* Trip-specific imagery */
 .d1{background-image:url('/photos/day1-pudong.png')}
+.d5{background-image:url('/photos/kokura-course.png')}
+.d6{background-image:url('/photos/yahata-31.webp')}
 .d7{background-image:url('/photos/day7-fukuoka.png')}
