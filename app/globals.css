@@ -1,26 +1,13 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+:root{--ink:#f5f2e9;--paper:#f4f0e5;--night:#071613;--green:#174b39;--gold:#d6b86a;--muted:#adc2b8;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:var(--ink);font-family:"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.65}a{color:inherit}.wrap{max-width:var(--max);margin:auto}
+.nav{position:fixed;inset:0 0 auto;z-index:20;padding:18px 4vw;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#06110fe8,transparent)}.brand{font-weight:800;letter-spacing:.16em;text-decoration:none}.nav a{text-decoration:none;font-size:14px}.nav-links{display:flex;gap:22px;color:#dbe7e2}
+.hero{position:relative;background:#0b2947;min-height:55vw;max-height:100svh;overflow:hidden}.hero-art{display:block;width:100%;height:auto;min-height:55vw;object-fit:cover;margin:auto}.scroll-cue{position:absolute;right:4vw;bottom:3vw;text-decoration:none;font-size:11px;letter-spacing:.18em;display:flex;align-items:center;gap:10px}.scroll-cue span{display:grid;place-items:center;width:32px;height:32px;border:1px solid #fff8;border-radius:50%}
+section{padding:100px 5vw}.section-head{display:grid;grid-template-columns:1fr 2fr;gap:30px;margin-bottom:48px;align-items:end}.section-head h2{font-family:"Noto Serif SC","Songti SC",serif;font-size:clamp(34px,5vw,64px);line-height:1;margin:8px 0 0}.section-head p{color:#5d675f;max-width:660px;margin:0;font-size:18px}.section-head.dark p{color:var(--muted)}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:#8a7140}
+.facts{background:var(--paper);color:#13241d}.fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#b6b9ac;border:1px solid #b6b9ac}.fact{background:var(--paper);padding:28px}.fact b{display:block;font-size:34px;color:var(--green)}.fact span{font-size:13px;color:#5d675f}
+.days{padding-bottom:40px}.day{min-height:78vh;margin:0 auto 28px;max-width:var(--max);border-radius:24px;overflow:hidden;position:relative;display:flex;align-items:flex-end;background-size:cover;background-position:center;isolation:isolate;box-shadow:0 24px 60px #0006}.day:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,18,14,.94) 0%,rgba(4,18,14,.46) 48%,rgba(4,18,14,.08) 78%);z-index:-1}.day-content{padding:clamp(28px,5vw,64px);width:100%;display:grid;grid-template-columns:220px 1fr;gap:40px}.day-no{color:#f0d58a;font-size:14px;letter-spacing:.14em}.day h3{font-family:"Noto Serif SC","Songti SC",serif;font-size:clamp(30px,4.5vw,58px);line-height:1.08;margin:0 0 18px;text-shadow:0 2px 18px #000}.route{color:#f1f5f2;margin:0 0 22px;text-shadow:0 2px 12px #000}.timeline{display:flex;flex-wrap:wrap;gap:10px}.stop{border:1px solid #ffffff48;background:#071613a8;backdrop-filter:blur(7px);padding:10px 14px;border-radius:12px;font-size:14px}.stop strong{color:#f0d58a;margin-right:8px}.d1{background-image:url('https://enjoy-kyushu.com/wp-content/uploads/2024/03/%E5%B0%8F%E5%80%89%E5%9F%8E04-1440x720.jpg')}.d2{background-image:url('/photos/kokura-poster.jpg')}.d3{background-image:url('/photos/yahata-20.webp')}.d4{background-image:url('/photos/mojiko-station.jpg');background-position:center 38%}.d5{background-image:url('https://www.mojigolf.co.jp/images/hole17_1.png')}.d6{background-image:url('https://www.wakamatsu.or.jp/upload/69fabc434d030.jpg')}.d7{background-image:url('https://enjoy-kyushu.com/wp-content/uploads/2024/03/%E5%B0%8F%E5%80%89%E5%9F%8E02-1080x720.jpg')}
+.courses{background:#0d251d}.course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.course{border:1px solid #ffffff21;border-radius:18px;padding:30px;background:#ffffff08}.course .num{color:var(--gold);font-size:12px;letter-spacing:.18em}.course h3{font-family:"Noto Serif SC","Songti SC",serif;font-size:26px;margin:7px 0}.course p{color:var(--muted);margin:0 0 18px}.course dl{display:grid;grid-template-columns:88px 1fr;margin:0;font-size:14px}.course dt{color:#82988d}.course dd{margin:0 0 7px}.course a{text-decoration-color:#ffffff55;text-underline-offset:3px}
+.drive{background:var(--paper);color:#15241e}.drive-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0 42px}.drive-row{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid #cdd1c7}.drive-row strong{color:var(--green);white-space:nowrap}.notice{margin-top:34px;padding:22px;border-left:4px solid var(--gold);background:#e9e4d6}.footer{padding:70px 5vw;color:#9bb0a6;border-top:1px solid #ffffff1c}.footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px}.footer b{color:#fff}
+@media(max-width:800px){.nav-links{display:none}.hero,.hero-art{min-height:72vw}.hero-art{width:128%;max-width:none;transform:translateX(-11%)}section{padding:72px 5vw}.section-head{grid-template-columns:1fr}.fact-grid{grid-template-columns:1fr 1fr}.fact{padding:20px}.day{min-height:82vh;border-radius:0;margin-inline:-5vw}.day-content{grid-template-columns:1fr;gap:12px}.course-grid,.drive-list{grid-template-columns:1fr}.footer-inner{display:block}.scroll-cue{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
