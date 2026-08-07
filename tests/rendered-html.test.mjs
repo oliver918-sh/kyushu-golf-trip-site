@@ -19,5 +19,16 @@ test("renders the Kyushu golf itinerary", async () => {
   assert.match(html, /MU5088/);
   assert.match(html, /小仓乡村俱乐部/);
   assert.match(html, /若松高尔夫俱乐部/);
+  assert.match(html, /12人同行/);
+  assert.match(html, /小仓丽嘉皇家酒店/);
+  assert.match(html, /BEB5门司港 by 星野度假村/);
+  assert.match(html, /西日本乡村俱乐部/);
+  assert.match(html, /11:03/);
+  assert.match(html, /11:30/);
+  assert.match(html, /10:07/);
+  assert.match(html, /无中场休息・连续击球/);
+  assert.doesNotMatch(html, /九州GC 八幡球场/);
+  assert.doesNotMatch(html, /JR九州站前酒店小仓/);
+  assert.doesNotMatch(html, /Junior Suite|套房|87,000|60,600|23,130|12,600|27,770|18,800|3,300|税率|预约费/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });
