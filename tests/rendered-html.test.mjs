@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -31,4 +32,10 @@ test("renders the Kyushu golf itinerary", async () => {
   assert.doesNotMatch(html, /JR九州站前酒店小仓/);
   assert.doesNotMatch(html, /Junior Suite|套房|87,000|60,600|23,130|12,600|27,770|18,800|3,300|税率|预约费/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
+});
+
+test("uses the official Wakamatsu seaside course photo", async () => {
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /wakamatsu-official\/okinoshima03\.png/);
+  await access(new URL("../public/photos/wakamatsu-official/okinoshima03.png", import.meta.url));
 });
