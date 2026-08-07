@@ -1,6 +1,6 @@
 # 九州高尔夫行程网站交接记录
 
-更新时间：2026-08-07（Asia/Shanghai）
+更新时间：2026-08-08（Asia/Shanghai）
 
 ## 已完成
 
@@ -14,11 +14,13 @@
 - Sites 部署成功：
   `https://kyushu-golf-journey.oliver918-tw.chatgpt.site`
 - 已在线验证：网站 HTTP 200；新照片资源 HTTP 200，大小 274025 bytes。
+- 回程航班已依最新资料改为：10月24日 MU5088，福冈 18:15 起飞，上海浦东 19:15 抵达。
 
 ## 域名状态
 
 - `https://yayitech.com` 已能访问新版行程。
 - `https://www.yayitech.com` 仍显示旧网页；Sites 状态为 `pending`，SSL 为 `pending_validation`。
+- 2026-08-08 权威 DNS 复查发现，`www.yayitech.com` 的 CNAME 仍指向旧目标 `www.yayitech.com.pages.dnsoe6.com`，并非 Sites 要求的 `custom-domains.chatgpt.site`；这是 `www` 未切换的直接原因。
 - 新网权威 DNS 仍同时返回新旧两组验证 TXT，导致验证尚未完成：
   - `_openai-site-verification.www.yayitech.com`
     - 应保留：`openai-site-verification=KXCmN43VKCRitnJ2wFjfVXZ0Huk-t82fhTd1GOuHRo8`
