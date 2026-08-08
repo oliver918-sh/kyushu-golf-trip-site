@@ -18,7 +18,11 @@ test("renders the Kyushu golf itinerary", async () => {
   assert.match(html, /九州小仓・门司港高尔夫之旅/);
   assert.match(html, /MU517/);
   assert.match(html, /MU5088/);
-  assert.match(html, /18:15–19:15/);
+  assert.match(html, /18:15/);
+  assert.match(html, /19:15/);
+  assert.match(html, /13:35/);
+  assert.match(html, /15:15/);
+  assert.doesNotMatch(html, /11:45|13:15/);
   assert.doesNotMatch(html, /16:15–19:15/);
   assert.match(html, /小仓乡村俱乐部/);
   assert.match(html, /若松高尔夫俱乐部/);
