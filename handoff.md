@@ -19,8 +19,8 @@
 ## 域名状态
 
 - `https://yayitech.com` 已能访问新版行程。
-- `https://www.yayitech.com` 仍显示旧网页；Sites 状态为 `pending`，SSL 为 `pending_validation`。
-- 2026-08-08 权威 DNS 复查发现，`www.yayitech.com` 的 CNAME 仍指向旧目标 `www.yayitech.com.pages.dnsoe6.com`，并非 Sites 要求的 `custom-domains.chatgpt.site`；这是 `www` 未切换的直接原因。
+- 2026-08-08 已将 `www.yayitech.com` 的 CNAME 从旧目标 `www.yayitech.com.pages.dnsoe6.com` 改为 Sites 要求的 `custom-domains.chatgpt.site`，并已由新网权威 DNS 确认生效。
+- `https://www.yayitech.com` 的 Sites 状态暂仍为 `pending`，SSL 为 `pending_validation`；刚修改后访问会暂时出现 SSL/TLS 通道错误，需等待证书签发与全球 DNS 同步。
 - 新网权威 DNS 仍同时返回新旧两组验证 TXT，导致验证尚未完成：
   - `_openai-site-verification.www.yayitech.com`
     - 应保留：`openai-site-verification=KXCmN43VKCRitnJ2wFjfVXZ0Huk-t82fhTd1GOuHRo8`
